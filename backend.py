@@ -1,14 +1,22 @@
+import os
 from datetime import datetime
 
 from dotenv import load_dotenv
+
+from init_db import index_name
 
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.prompts.prompt import PromptTemplate
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import Pinecone
+
+import pinecone
+
 
 load_dotenv()
+
+pinecone.init(api_key=os.getenv('PINECONE_API_KEY'), environment=os.getenv('PINECONE_ENVIRONMENT_REGION'))
 
 
 def get_current_weekday_ukrainian():
@@ -38,7 +46,7 @@ CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
 def run_llm(query, chat_history):
     embeddings = OpenAIEmbeddings()
-    vectordb = Chroma(persist_directory="db", embedding_function=embeddings)
+    vectordb = Pinecone.from_existing_index(index_name=index_name, embedding=embeddings)
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
     qa = ConversationalRetrievalChain.from_llm(
         llm=llm, retriever=vectordb.as_retriever(), condense_question_prompt=CONDENSE_QUESTION_PROMPT

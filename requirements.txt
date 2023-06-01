@@ -18,6 +18,7 @@ clickhouse-connect==0.5.25
 coloredlogs==15.0.1
 dataclasses-json==0.5.7
 decorator==5.1.1
+dnspython==2.3.0
 duckdb==0.8.0
 entrypoints==0.4
 exceptiongroup==1.1.1
@@ -37,6 +38,7 @@ importlib-metadata==6.6.0
 Jinja2==3.1.2
 jsonschema==4.17.3
 langchain==0.0.187
+loguru==0.7.0
 lz4==4.3.2
 markdown-it-py==2.2.0
 MarkupSafe==2.1.2
@@ -58,6 +60,7 @@ packaging==23.1
 pandas==2.0.2
 pathspec==0.11.1
 Pillow==9.5.0
+pinecone-client==2.2.1
 platformdirs==3.5.1
 posthog==3.0.1
 protobuf==3.20.3
