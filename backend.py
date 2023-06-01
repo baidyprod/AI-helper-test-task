@@ -13,6 +13,8 @@ from langchain.vectorstores import Pinecone
 
 import pinecone
 
+import pytz
+
 
 load_dotenv()
 
@@ -29,7 +31,10 @@ def get_current_weekday_ukrainian():
         "Saturday": "субота",
         "Sunday": "неділя",
     }
-    english_date = datetime.now().strftime("%A")
+
+    target_timezone = pytz.timezone('Europe/Kyiv')
+    current_time = datetime.now(pytz.utc).astimezone(target_timezone)
+    english_date = current_time.strftime("%A")
     return dates_translation[english_date]
 
 
