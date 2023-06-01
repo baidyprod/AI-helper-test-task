@@ -23,7 +23,7 @@
 That's it! Have fun :)
 
 ## Screenshots:
-### Geolocation questions
+### Geolocation + current weekday questions
 ![picture alt](https://res.cloudinary.com/dbtmzypoa/image/upload/v1685623033/AI%20helper%20screenshots/i9cahs568fh219qgv3qf.png)
 ### FAQ questions
 ![picture alt](https://res.cloudinary.com/dbtmzypoa/image/upload/v1685623033/AI%20helper%20screenshots/fqgk4weo7vpkdz9d0gwu.png)
