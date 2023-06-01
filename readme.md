@@ -8,9 +8,11 @@
 ## Installation:
 * Clone the repository
 * Create and activate virtual environment
-* Create .env file and paste OpenAI API Key like this:
+* Create .env file and paste API Keys like this:
 ```.env
 OPENAI_API_KEY="your api key"
+PINECONE_API_KEY="your api key"
+PINECONE_ENVIRONMENT_REGION="your api key"
 ```
 * Open terminal in project folder and run:
 1. ```bash
@@ -23,6 +25,7 @@ OPENAI_API_KEY="your api key"
    streamlit run main.py
    ```
 4. To stop the app, press Control+C in the current terminal window
+5. To restart the app, just run the last command, because the cloud db is already initialised!
 
 That's it! Have fun :)
 
