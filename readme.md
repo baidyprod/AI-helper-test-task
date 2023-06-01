@@ -3,7 +3,7 @@
 ## Features
 * Chat understands conversation context
 * Chat has information about current weekday
-* Data about geolocation of shops is scraped
+* Geolocation of shops is being scraped from shops website
 
 ## Installation:
 * Clone the repository
