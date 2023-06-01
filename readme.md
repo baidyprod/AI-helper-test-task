@@ -8,8 +8,11 @@
 ## Installation:
 * Clone the repository
 * Create and activate virtual environment
-* Create .env file and paste OpenAI API Key like this OPENAI_API_KEY="your api key"
-* Open terminal and run:
+* Create .env file and paste OpenAI API Key like this:
+```.env
+OPENAI_API_KEY="your api key"
+```
+* Open terminal in project folder and run:
 1. ```bash
    pip install -r requirements.txt
    ```
