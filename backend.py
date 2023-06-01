@@ -38,12 +38,12 @@ def get_current_weekday_ukrainian():
     return dates_translation[english_date]
 
 
-_template = """Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
+_template = """Given the following conversation and a follow up question with current weekday. Rephrase the follow up question to be a standalone question, in its original language. Add a current weekday if needed.
 
-Chat History:
+Conversation:
 {chat_history}
-Follow Up Input: {question}""" + f"""
-Current weekday: {get_current_weekday_ukrainian()}
+Follow Up Question: {question}""" + f"""
+Current Weekday: {get_current_weekday_ukrainian()}
 """ + """Standalone question:"""  # noqa: E501
 
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
