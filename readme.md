@@ -22,7 +22,7 @@ OPENAI_API_KEY="your api key"
 3. ```bash
    streamlit run main.py
    ```
-4. To stop the app, press Control+C
+4. To stop the app, press Control+C in the current terminal window
 
 That's it! Have fun :)
 
