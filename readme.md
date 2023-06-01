@@ -8,17 +8,18 @@
 ## Installation:
 * Clone the repository
 * Create and activate virtual environment
-* Create an .env file and paste OpenAI API Key like this OPENAI_API_KEY="your api key"
+* Create .env file and paste OpenAI API Key like this OPENAI_API_KEY="your api key"
 * Open terminal and run:
 1. ```bash
    pip install -r requirements.txt
    ```
 2. ```bash
-   python init_db
+   python init_db.py
    ```
 3. ```bash
    streamlit run main.py
    ```
+4. To stop the app, press Control+C
 
 That's it! Have fun :)
 
